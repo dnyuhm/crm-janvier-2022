@@ -12,3 +12,4 @@ export class PageListOrdersComponent {
     this.ordersService.collection$.subscribe((data) => console.log(data));
   }
 }
+

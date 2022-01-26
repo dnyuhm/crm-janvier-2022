@@ -9,10 +9,10 @@ import { environment } from 'src/environments/environment';
 })
 export class OrdersService {
   private urlApi: string = environment.urlApi;
-  public collection$!: Observable<any>;
+  public collection$!: Observable<Order[]>;
 
   constructor(private httpClient: HttpClient) {
-    this.collection$ = this.httpClient.get<any>(`${this.urlApi}/Orders`);
+    this.collection$ = this.httpClient.get<Order[]>(`${this.urlApi}/Orders`);
     console.log('service instanced');
   }
 }
