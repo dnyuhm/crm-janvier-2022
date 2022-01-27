@@ -7,9 +7,16 @@ import { OrdersService } from '../../services/orders.service';
   styleUrls: ['./page-list-orders.component.scss'],
 })
 export class PageListOrdersComponent {
+  public title: string;
+
   constructor(private ordersService: OrdersService) {
+    this.title = 'orders list';
+
     console.log(this.ordersService.collection$);
     this.ordersService.collection$.subscribe((data) => console.log(data));
   }
-}
 
+  public changeTitle(): void {
+    this.title = 'le titre a changé';
+  }
+}
