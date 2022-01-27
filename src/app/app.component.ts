@@ -11,7 +11,7 @@ export class AppComponent {
   // });
   // private subj = new Subject();
   // private behav = new BehaviorSubject(1);
-  // public title: string = 'crm';
+  public title: string = 'crm';
 
   constructor() {
     // console.log(this.obs);
